@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Histórico de Prescrições • Clinix</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="log.png" alt="Clinix" class="sidebar-logo-img">
+      <div class="sidebar-logo-text">clinix</div>
+    </div>
+    <div class="user-profile">
+      <div class="avatar"></div>
+      <div class="user-info">
+        <div class="user-name">Sofia Carvalho</div>
+        <div class="user-id">ID do Paciente: 123456</div>
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="dashboard.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Início
+      </a>
+      <a href="consultas.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        Minhas Consultas
+      </a>
+      <a href="agendar.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        Agendar Consulta
+      </a>
+      <a class="active" href="historico.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        Histórico
+      </a>
+      <a href="perfil.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        Meu Perfil
+      </a>
+      <a href="notificacoes.html">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        Notificações
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn-logout">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        Sair
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    
+    <div style="display:flex; align-items:center; gap: 16px; margin-bottom: 32px;">
+      <a href="historico.html" class="btn-outline" style="border:none; padding: 8px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      </a>
+      <h1 class="dash-title" style="margin:0;">Histórico de Prescrições</h1>
+    </div>
+
+    <div class="doc-list">
+      
+      <div class="doc-card">
+        <div class="doc-icon-box icon-bg-teal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5l10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"></path><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"></line></svg>
+        </div>
+        <div class="doc-info">
+          <div class="doc-title">Amoxicilina 500mg</div>
+          <div class="doc-meta">
+            <span>Prescrito por Dr. Lucas Pereira</span>
+            <span>10 de Junho, 2024</span>
+          </div>
+          <div style="font-size: 14px; color: #555; margin-top: 6px;">
+            Tomar 1 comprimido a cada 8 horas por 7 dias.
+          </div>
+        </div>
+        <a href="#" class="btn-doc-action">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          Ver Receita
+        </a>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon-box icon-bg-teal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5l10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7z"></path><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"></line></svg>
+        </div>
+        <div class="doc-info">
+          <div class="doc-title">Ibuprofeno 400mg</div>
+          <div class="doc-meta">
+            <span>Prescrito por Dr. Rafael Almeida</span>
+            <span>12 de Abril, 2024</span>
+          </div>
+          <div style="font-size: 14px; color: #555; margin-top: 6px;">
+            Tomar em caso de dor intensa, no máximo 3 vezes ao dia.
+          </div>
+        </div>
+        <a href="#" class="btn-doc-action">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          Ver Receita
+        </a>
+      </div>
+
+      <div class="doc-card">
+        <div class="doc-icon-box icon-bg-purple">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 7.8l-7.7 7.7a4 4 0 0 1-5.7-5.7l7.7-7.7a6 6 0 0 1 5.7 5.7z"></path><path d="M5 19a4 4 0 0 1 0-5.7L12 6.3"></path></svg>
+        </div>
+        <div class="doc-info">
+          <div class="doc-title">Pomada Dermatológica</div>
+          <div class="doc-meta">
+            <span>Prescrito por Dra. Beatriz Costa</span>
+            <span>25 de Maio, 2024</span>
+          </div>
+          <div style="font-size: 14px; color: #555; margin-top: 6px;">
+            Aplicar na área afetada 2 vezes ao dia.
+          </div>
+        </div>
+        <a href="#" class="btn-doc-action">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          Ver Receita
+        </a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

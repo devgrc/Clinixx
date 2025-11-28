@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Detalhes da Consulta • Clinix</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="log.png" alt="clinix logo"></a>
+      <button id="hamburger" class="hamburger" aria-label="Menu"></button>
+      <nav id="nav" class="nav">
+        <div class="nav-links"><a href="dashboard.html">Início</a></div>
+        <div class="nav-actions"><a class="btn secondary" href="consultas.html">Minhas Consultas</a></div>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <h1 style="margin:0 0 8px">Detalhes da sua consulta</h1>
+      <p class="muted">Tudo o que você precisa saber para sua próxima visita.</p>
+      <div style="margin-top:20px">
+        <h3 style="margin:0 0 6px">Data da consulta</h3>
+        <div id="det-data" class="muted">—</div>
+      </div>
+      <div style="margin-top:20px">
+        <h3 style="margin:0 0 10px">Consulta</h3>
+        <div class="card">
+          <div class="grid" style="grid-template-columns:1fr">
+            <div>
+              <strong id="det-medico">—</strong>
+              <div class="muted" id="det-especialidade">—</div>
+            </div>
+            <div>
+              <strong>Horário</strong>
+              <div class="muted" id="det-hora">—</div>
+            </div>
+            <div>
+              <strong>Local</strong>
+              <div class="muted" id="det-local">123 Medical Plaza • Cityville</div>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:12px">
+          <strong>Instruções especiais</strong>
+          <p class="muted" id="det-notes" style="margin:6px 0 0">Chegue 15 minutos antes para preenchimento de
+            formulários.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+        <button id="det-add-calendar" class="btn secondary">Adicionar no calendário</button>
+        <button id="det-directions" class="btn secondary">Get Directions</button>
+        <a class="btn" href="agendar.html">Reprogramar</a>
+        <button id="det-cancel" class="btn secondary">Cancelar</button>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

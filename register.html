@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Criar Conta • Clinix</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="log.png" alt="clinix logo">
+    </a>
+    
+    <button id="hamburger" class="hamburger" aria-label="Menu"></button>
+    
+    <nav id="nav" class="nav">
+      <div class="nav-links">
+        <a href="index.html" style="font-weight: 500; color: #333;">Início</a>
+      </div>
+      <div class="nav-actions">
+        <a class="btn" href="login.html">Entrar</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="auth-page">
+  <div class="auth-brand-center">
+    <img src="log.png" alt="Clinix Logo">
+  </div>
+
+  <div class="login-card">
+    <h1 class="login-title">Criar Conta</h1>
+
+    <div class="role-tabs">
+      <button class="role-tab active" id="tab-paciente">Sou Paciente</button>
+      <button class="role-tab inactive" id="tab-medico">Sou Médico</button>
+    </div>
+
+    <form id="register-form" class="form">
+      
+      <div style="margin-bottom: 16px;">
+        <label class="input-label-row">Nome Completo <span class="required-mark">*</span></label>
+        <input id="reg-name" class="input-large" type="text" placeholder="Maria Silva" required>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label class="input-label-row">Email <span class="required-mark">*</span></label>
+        <input id="reg-email" class="input-large" type="email" placeholder="seu@email.com" required>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label class="input-label-row">Senha <span class="required-mark">*</span></label>
+        <input id="reg-pass" class="input-large" type="password" placeholder="••••••••" required>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label class="input-label-row">Confirmar Senha <span class="required-mark">*</span></label>
+        <input id="reg-confirm" class="input-large" type="password" placeholder="••••••••" required>
+      </div>
+
+      <div id="medico-note" class="auth-note">
+        <strong>Nota:</strong> Para médicos, será necessário verificar suas credenciais antes de ativar completamente sua conta.
+      </div>
+
+      <button class="btn" type="submit" style="width: 100%; padding: 14px; font-size: 16px;">Criar conta</button>
+
+      <div class="auth-footer">
+        Já tem uma conta? <a href="login.html">Entrar</a>
+      </div>
+
+    </form>
+  </div>
+</main>
+
+<script src="script.js"></script>
+
+<script>
+  const tabPaciente = document.getElementById('tab-paciente');
+  const tabMedico = document.getElementById('tab-medico');
+  const note = document.getElementById('medico-note');
+
+  function switchTab(role) {
+    if (role === 'paciente') {
+      // Ativa Paciente
+      tabPaciente.classList.add('active');
+      tabPaciente.classList.remove('inactive');
+      
+      // Desativa Médico
+      tabMedico.classList.add('inactive');
+      tabMedico.classList.remove('active');
+      
+      // Esconde Nota
+      note.style.display = 'none';
+    } else {
+      // Ativa Médico
+      tabMedico.classList.add('active');
+      tabMedico.classList.remove('inactive');
+      
+      // Desativa Paciente
+      tabPaciente.classList.add('inactive');
+      tabPaciente.classList.remove('active');
+      
+      // Mostra Nota
+      note.style.display = 'block';
+    }
+  }
+
+  tabPaciente.addEventListener('click', (e) => { e.preventDefault(); switchTab('paciente'); });
+  tabMedico.addEventListener('click', (e) => { e.preventDefault(); switchTab('medico'); });
+</script>
+
+</body>
+</html>

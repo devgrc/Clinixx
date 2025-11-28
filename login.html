@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrar • Clinix</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="log.png" alt="clinix logo">
+    </a>
+    
+    <button id="hamburger" class="hamburger" aria-label="Menu"></button>
+    
+    <nav id="nav" class="nav">
+      <div class="nav-links">
+        <a href="index.html" style="font-weight: 500; color: #333;">Início</a>
+      </div>
+      <div class="nav-actions">
+        <a class="btn" href="register.html">Cadastrar</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="auth-page">
+  <div class="auth-brand-center">
+    <img src="log.png" alt="Clinix Logo">
+  </div>
+
+  <div class="login-card">
+    <h1 class="login-title">Entrar</h1>
+
+    <div class="role-tabs">
+      <button class="role-tab active" id="tab-paciente">Sou Paciente</button>
+      <button class="role-tab inactive" id="tab-medico">Sou Médico</button>
+    </div>
+
+    <form id="login-form" class="form">
+      
+      <div style="margin-bottom: 16px;">
+        <label class="input-label-row">Email <span class="required-mark">*</span></label>
+        <input id="login-email" class="input-large" type="email" placeholder="seu@email.com" required>
+      </div>
+
+      <div>
+        <label class="input-label-row">Senha <span class="required-mark">*</span></label>
+        <input id="login-pass" class="input-large" type="password" placeholder="••••••••" required>
+      </div>
+
+      <div class="form-options">
+        <label class="checkbox-label">
+          <input type="checkbox"> Lembrar de mim
+        </label>
+        <a href="#" class="forgot-link">Esqueceu a senha?</a>
+      </div>
+
+      <button class="btn" type="submit" style="width: 100%; padding: 14px; font-size: 16px;">Entrar</button>
+
+      <div class="auth-footer">
+        Não tem uma conta? <a href="register.html">Criar conta</a>
+      </div>
+
+    </form>
+  </div>
+</main>
+
+<script src="script.js"></script>
+
+<script>
+  const tabPaciente = document.getElementById('tab-paciente');
+  const tabMedico = document.getElementById('tab-medico');
+
+  function switchTab(role) {
+    if (role === 'paciente') {
+      tabPaciente.classList.add('active');
+      tabPaciente.classList.remove('inactive');
+      tabMedico.classList.add('inactive');
+      tabMedico.classList.remove('active');
+    } else {
+      tabMedico.classList.add('active');
+      tabMedico.classList.remove('inactive');
+      tabPaciente.classList.add('inactive');
+      tabPaciente.classList.remove('active');
+    }
+  }
+
+  tabPaciente.addEventListener('click', (e) => { e.preventDefault(); switchTab('paciente'); });
+  tabMedico.addEventListener('click', (e) => { e.preventDefault(); switchTab('medico'); });
+</script>
+
+</body>
+</html>
