@@ -109,7 +109,6 @@ const State = {
   }
 };
 
-/* --- FUNÇÕES GERAIS --- */
 function initNav() {
   const btn = $(S.hamburger);
   const nav = $(S.nav);
